@@ -29,6 +29,18 @@ export default function reducer(statePart = [], action = {}) {
         searchPhrase: action.payload,
       };
     // TODO - handle other action types
+    case CHANGE_DURATION:
+      return {
+        ...statePart,
+        duration: action.payload,
+      };
+    // TODO - handle other action types
+    case CHANGE_TAGS:
+      return {
+        ...statePart,
+        tags: action.payload,
+      };
+    // TODO - handle other action types
     default:
       return statePart;
   }
