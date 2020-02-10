@@ -12,6 +12,16 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
+@keyframes slide {
+  from {
+    top: 200px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
 @mixin p-el($element) {
   &:#{$element}, &::#{$element} {
     position: absolute;
