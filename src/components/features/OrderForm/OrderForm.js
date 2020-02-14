@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // import DetailsBox from '../../common/DetailsBox/DetailsBox';
 // import DetailsImage from '../../common/DetailsImage/DetailsImage';
 // import List from '../../common/List/List';
-// import ListItem from '../../common/ListItem/ListItem';
+import OrderSummary from '../../features/OrderSummary/OrderSummary';
 import {Row, Col} from 'react-flexbox-grid';
 
 const OrderForm = () => (
@@ -14,6 +14,7 @@ const OrderForm = () => (
 
   <Row>
     <Col xs={12}>
+      <OrderSummary />
     </Col>
   </Row>
 

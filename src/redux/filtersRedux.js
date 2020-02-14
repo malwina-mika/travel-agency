@@ -8,8 +8,8 @@ export const getAllFilters = ({filters}) => filters;
 const reducerName = 'filters';
 const createActionName = name => `app/${reducerName}/${name}`;
 
-// action types
-export const CHANGE_PHRASE = createActionName('CHANGE_PHRASE');
+// action types = stringi
+export const CHANGE_PHRASE = createActionName('CHANGE_PHRASE'); //app/filters/CHANGE_PHRASE
 export const CHANGE_DURATION = createActionName('CHANGE_DURATION');
 export const ADD_TAG = createActionName('ADD_TAG');
 export const REMOVE_TAG = createActionName('REMOVE_TAG');
