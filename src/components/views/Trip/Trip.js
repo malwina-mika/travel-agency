@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import HTMLParser from 'react-html-parser';
+import React from 'react'
+import PropTypes from 'prop-types'
+import HTMLParser from 'react-html-parser'
 
-import NotFound from '../NotFound/NotFound';
-import Section from '../../layout/Section/Section';
-import PageTitle from '../../common/PageTitle/PageTitle';
-import SideImage from '../../common/SideImage/SideImage';
-import DetailsBox from '../../common/DetailsBox/DetailsBox';
-import DetailsImage from '../../common/DetailsImage/DetailsImage';
-import List from '../../common/List/List';
-import ListItem from '../../common/ListItem/ListItem';
-import OrderForm from '../../features/OrderForm/OrderForm';
+import NotFound from '../NotFound/NotFound'
+import Section from '../../layout/Section/Section'
+import PageTitle from '../../common/PageTitle/PageTitle'
+import SideImage from '../../common/SideImage/SideImage'
+import DetailsBox from '../../common/DetailsBox/DetailsBox'
+import DetailsImage from '../../common/DetailsImage/DetailsImage'
+import List from '../../common/List/List'
+import ListItem from '../../common/ListItem/ListItem'
+import OrderForm from '../../features/OrderForm/OrderFormContainer'
 
-import styles from './Trip.scss';
-import {Grid, Row, Col} from 'react-flexbox-grid';
+import styles from './Trip.scss'
+import { Grid, Row, Col } from 'react-flexbox-grid'
 
-const Trip = ({error, name, image, cost, days, description, country, intro}) => {
-  if(error) return <NotFound />;
+const Trip = ({ error, name, image, cost, days, description, country, intro }) => {
+  if (error) return <NotFound />
   else return (
     <Section>
       <Grid>
@@ -71,13 +71,13 @@ const Trip = ({error, name, image, cost, days, description, country, intro}) => 
         <Row>
           <Col xs={12}>
             <PageTitle text='Trip options' />
-            <OrderForm  tripCost={cost} />
+            <OrderForm tripCost={cost} />
           </Col>
         </Row>
       </Grid>
     </Section>
-  );
-};
+  )
+}
 
 Trip.propTypes = {
   name: PropTypes.string,
@@ -86,6 +86,6 @@ Trip.propTypes = {
   days: PropTypes.number,
   description: PropTypes.string,
   country: PropTypes.object,
-};
+}
 
-export default Trip;
+export default Trip

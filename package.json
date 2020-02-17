@@ -18,6 +18,13 @@
   "lint-staged": {
     "src/**/*.js": "eslint"
   },
+  "prettier": {
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "all",
+    "printWidth": 80
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

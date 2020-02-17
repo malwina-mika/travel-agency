@@ -1,31 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-// import {Link} from 'react-router-dom';
-// import styles from './OrderForm.scss';
-// import SideImage from '../../common/SideImage/SideImage';
-// import DetailsBox from '../../common/DetailsBox/DetailsBox';
-// import DetailsImage from '../../common/DetailsImage/DetailsImage';
-// import List from '../../common/List/List';
-import OrderSummary from '../../features/OrderSummary/OrderSummary';
-import {Row, Col} from 'react-flexbox-grid';
+import React from 'react'
+import PropTypes from 'prop-types'
+import OrderSummary from '../../features/OrderSummary/OrderSummary'
+import OrderOption from '../../features/OrderOption/OrderOption'
 
-const OrderForm = () => (
+import { Row, Col } from 'react-flexbox-grid'
 
-
+const OrderForm = props => (
   <Row>
     <Col xs={12}>
-      <OrderSummary />
+      <OrderSummary cost={props.tripCost} options={props.options} />
+      <OrderOption />
     </Col>
   </Row>
-
-
-
-);
+)
 
 OrderForm.propTypes = {
+  options: PropTypes.node,
+  tripCost: PropTypes.string,
+}
 
-  name: PropTypes.string,
-
-};
-
-export default OrderForm;
+export default OrderForm
