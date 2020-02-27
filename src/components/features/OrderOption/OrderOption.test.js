@@ -146,7 +146,8 @@ describe('Component OrderOption', () => {
           })
 
           it('should run setOrderOption function on change', () => {
-            renderedSubcomponent.find('input[value="${testValue}"]').simulate('change', { currentTarget: { checked: true } })
+            const checkbox = renderedSubcomponent.find(`input[value="${testValue}"]`)
+            checkbox.simulate('change', { currentTarget: { checked: true } })
             expect(mockSetOrderOption).toBeCalledTimes(1)
             expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: [mockProps.currentValue, testValue] })
           })
