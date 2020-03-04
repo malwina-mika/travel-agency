@@ -41,7 +41,6 @@ class HappyHourAd extends React.Component {
         <div className={styles.promoDescription}>
           {(counter > 23 * 60 * 60) ? promoDescription : counter}
         </div>
-        <div className={styles.promoDescription}>{counter}</div>
 
       </div>)
   }
